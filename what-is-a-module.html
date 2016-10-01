@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @font-face {
+                font-family:"Alte Haas Grotesk";
+                font-weight:bold;
+                src: url("AlteHaasGroteskBold.ttf");
+            }
+            @font-face {
+                font-family:"Alte Haas Grotesk";
+                src: url("AlteHaasGroteskRegular.ttf");
+            }
+        </style>
+        <meta charset="utf-8">
+        <title>Fedora Modularity</title>
+        <script src="snap.svg-min.js"></script>
+		<script>
+			window.onload = function () {
+          var s = Snap("#animationDiv");
+          //s.attr({viewBox: "0 0 255 150"});
+				  Snap.load("what-is-a-module.svg", function(f) {
+              intro1 = f.select("#rect4642");
+              intro2 = f.select("#path3584");
+              intro3 = f.select("#path3562");
+              intro4 = f.select("#path3588");
+              intro5 = f.select("#path4391");
+
+
+              /*  subtitle1a = f.select("#tspan4449");
+                subtitle1b = f.select("#tspan4461");
+                subtitle2a = f.select("#tspan4497");
+                subtitle2b = f.select("#tspan4509");
+                subtitle2c = f.select("#tspan4529");
+                subtitle2d = f.select("#tspan4533");
+                subtitle3a = f.select("#tspan4545");
+                subtitle3b = f.select("#tspan4557");
+                subtitle4a = f.select("#tspan4614");
+                subtitle4b = f.select("#tspan4630");
+
+
+
+
+
+                ///////////////////// initial /////////////////////
+                setTimeout(function() {
+                        subtitle1a.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle1b.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle2a.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle2b.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle2c.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle2d.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle3a.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle3b.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle4a.animate({"fill-opacity":0}, 1, mina.linear);
+                        subtitle4b.animate({"fill-opacity":0}, 1, mina.linear);
+
+                        subtitle1a.animate({x:13}, 1, mina.easeout);
+                        subtitle1b.animate({x:304}, 1, mina.easeout);
+                        subtitle2a.animate({x:13}, 1, mina.easeout);
+                        subtitle2b.animate({x:304}, 1, mina.easeout);
+                        subtitle2c.animate({x:13}, 1, mina.easeout);
+                        subtitle2d.animate({x:304}, 1, mina.easeout);
+                        subtitle3a.animate({x:13}, 1, mina.easeout);
+                        subtitle3b.animate({x:304}, 1, mina.easeout);
+                        subtitle4a.animate({x:13}, 1, mina.easeout);
+                        subtitle4b.animate({x:304}, 1, mina.easeout);
+
+                    },
+                    0
+                );  */
+
+
+              module1 = f.select("#module1");
+              module1t = f.select("#tspan4936-9");
+              component1 = f.select("#component1");
+              component1t = f.select("#tspan4932-4");
+              component2 = f.select("#component2");
+              component2t = f.select("#tspan5489");
+              component3 = f.select("#component3");
+              component3t = f.select("#tspan5495");
+              component4 = f.select("#component4");
+              component4t = f.select("#tspan5501");
+              component1api = f.select("#tspan5505");
+              component2api = f.select("#tspan5509");
+
+              dep1 = f.select("#dep1");
+              dep1t = f.select("#tspan5517");
+              dep1c1 = f.select("#dep1c1");
+              dep1c2 = f.select("#dep1c2");
+              dep1c3 = f.select("#dep1c3");
+
+              arrow1 = f.select("#arrow1");
+              arrow1t = f.select("#tspan6825");
+
+              buildsystem1 = f.select("#buildsystem1");
+              buildsystem1ta = f.select("#tspan13499");
+              buildsystem1tb = f.select("#tspan13501");
+              repo = f.select("#repo");
+              repot = f.select("#tspan13487");
+              container = f.select("#container");
+              containert = f.select("#tspan13491");
+              iso = f.select("#iso");
+              isot = f.select("#tspan13495");
+
+
+
+              buildarr1 = f.select("#buildarr1");
+              buildarr2a = f.select("#buildarr2a");
+              buildarr2b = f.select("#buildarr2b");
+              buildarr2c = f.select("#buildarr2c");
+
+
+
+
+              setTimeout(function() {
+                      component1.animate({"fill-opacity":0}, 1, mina.linear);
+                      component2.animate({"fill-opacity":0}, 1, mina.linear);
+                      component3.animate({"fill-opacity":0}, 1, mina.linear);
+                      component4.animate({"fill-opacity":0}, 1, mina.linear);
+
+                      component1t.animate({"fill-opacity":0}, 1, mina.linear);
+                      component2t.animate({"fill-opacity":0}, 1, mina.linear);
+                      component3t.animate({"fill-opacity":0}, 1, mina.linear);
+                      component4t.animate({"fill-opacity":0}, 1, mina.linear);
+
+                      component1api.animate({"fill-opacity":0}, 1, mina.linear);
+                      component2api.animate({"fill-opacity":0}, 1, mina.linear);
+
+                      dep1.animate({"fill-opacity":0}, 1, mina.linear);
+                      dep1t.animate({"fill-opacity":0}, 1, mina.linear);
+                      dep1c1.animate({"fill-opacity":0}, 1, mina.linear);
+                      dep1c2.animate({"fill-opacity":0}, 1, mina.linear);
+                      dep1c3.animate({"fill-opacity":0}, 1, mina.linear);
+                      arrow1.animate({"opacity":0}, 1, mina.linear);
+                      arrow1t.animate({"fill-opacity":0}, 1, mina.linear);
+
+
+                      buildsystem1.animate({"opacity":0}, 1, mina.linear);
+                      buildsystem1ta.animate({"fill-opacity":0}, 1, mina.linear);
+                      buildsystem1tb.animate({"fill-opacity":0}, 1, mina.linear);
+                      repo.animate({"fill-opacity":0}, 1, mina.linear);
+                      repot.animate({"fill-opacity":0}, 1, mina.linear);
+                      container.animate({"fill-opacity":0}, 1, mina.linear);
+                      containert.animate({"fill-opacity":0}, 1, mina.linear);
+                      iso.animate({"fill-opacity":0}, 1, mina.linear);
+                      isot.animate({"fill-opacity":0}, 1, mina.linear);
+
+                      buildarr1.animate({"opacity":0}, 1, mina.linear);
+                      buildarr2a.animate({"opacity":0}, 1, mina.linear);
+                      buildarr2b.animate({"opacity":0}, 1, mina.linear);
+                      buildarr2c.animate({"opacity":0}, 1, mina.linear);
+
+                    },
+                    0
+                );
+
+
+
+              setTimeout(function() {
+                      module1t.animate({y:126.3273}, 400, mina.easeinout);
+
+                      component1.animate({x:79.214}, 1, mina.linear);
+                      component2.animate({x:79.214}, 1, mina.linear);
+                      component3.animate({x:79.214}, 1, mina.linear);
+                      component4.animate({x:79.214}, 1, mina.linear);
+
+                      component1t.animate({x:32.769}, 1, mina.linear);
+                      component2t.animate({x:32.769}, 1, mina.linear);
+                      component3t.animate({x:32.769}, 1, mina.linear);
+                      component4t.animate({x:32.769}, 1, mina.linear);
+
+                      component1api.animate({x:151.947}, 1, mina.linear);
+                      component2api.animate({x:151.947}, 1, mina.linear);
+                    },
+                    2000
+                );
+
+              setTimeout(function() {
+                      component1.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    3000
+              );
+              setTimeout(function() {
+                      component2.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    3100
+              );
+              setTimeout(function() {
+                      component3.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    3200
+              );
+              setTimeout(function() {
+                      component4.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    3300
+              );
+
+
+
+              setTimeout(function() {
+                        module1.animate({x:14.655}, 300, mina.easeinout);
+                        module1t.animate({x:79.189}, 300, mina.easeinout);
+
+                        component1.animate({x:19.947}, 300, mina.easeinout);
+                        component2.animate({x:19.947}, 300, mina.easeinout);
+                        component3.animate({x:19.947}, 300, mina.easeinout);
+                        component4.animate({x:19.947}, 300, mina.easeinout);
+
+                        dep1.animate({x:213.568}, 1, mina.linear);
+                        dep1t.animate({x:235.765}, 1, mina.linear);
+                        dep1c1.animate({x:216.489}, 1, mina.linear);
+                        dep1c2.animate({x:216.489}, 1, mina.linear);
+                        dep1c3.animate({x:216.489}, 1, mina.linear);
+                        arrow1.animate({x:181.251}, 1, mina.linear);
+                        arrow1t.animate({x:243.466}, 1, mina.linear);
+                    },
+                    4000
+              );
+
+
+
+              setTimeout(function() {
+                      component1t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    5000
+              );
+              setTimeout(function() {
+                      component2t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    5100
+              );
+              setTimeout(function() {
+                      component3t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    5200
+              );
+              setTimeout(function() {
+                      component4t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    5300
+              );
+
+
+
+              setTimeout(function() {
+                      dep1.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      dep1t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      dep1c1.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      dep1c2.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      dep1c3.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      arrow1.animate({"opacity":1}, 300, mina.easeinout);
+                      arrow1t.animate({"fill-opacity":1}, 300, mina.easeinout);
+                    },
+                    6000
+              );
+
+
+
+              setTimeout(function() {
+                      component1api.animate({"fill-opacity":1}, 300, mina.easeinout);
+                      component2api.animate({"fill-opacity":1}, 300, mina.easeinout);
+
+                      component1.animate({fill:"#f9f9f9"}, 300, mina.easeinout);
+                      component2.animate({fill:"#f9f9f9"}, 300, mina.easeinout);
+                      component3.animate({fill:"#b3b3b3"}, 300, mina.easeinout);
+                      component4.animate({fill:"#b3b3b3"}, 300, mina.easeinout);
+                    },
+                    7000
+              );
+
+
+              setTimeout(function() {
+                      dep1.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      dep1t.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      dep1c1.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      dep1c2.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      dep1c3.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      arrow1.animate({"opacity":0}, 300, mina.easeinout);
+                      arrow1t.animate({"fill-opacity":0}, 300, mina.easeinout);
+
+                      component1t.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      component2t.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      component3t.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      component4t.animate({"fill-opacity":0}, 300, mina.easeinout);
+
+                      component1api.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      component2api.animate({"fill-opacity":0}, 300, mina.easeinout);
+
+                      component1.animate({fill:"#e6e6e6"}, 300, mina.easeinout);
+                      component2.animate({fill:"#e6e6e6"}, 300, mina.easeinout);
+                      component3.animate({fill:"#e6e6e6"}, 300, mina.easeinout);
+                      component4.animate({fill:"#e6e6e6"}, 300, mina.easeinout);
+                    },
+                    8000
+              );
+
+              setTimeout(function() {
+                        module1.animate({x:13.068,width:83.375}, 300, mina.easeinout);
+                        module1t.animate({x:36.326}, 300, mina.easeinout);
+
+                        component1.animate({x:18.360,width:71.845}, 300, mina.easeinout);
+                        component2.animate({x:18.360,width:71.845}, 300, mina.easeinout);
+                        component3.animate({x:18.360,width:71.845}, 300, mina.easeinout);
+                        component4.animate({x:18.360,width:71.845}, 300, mina.easeinout);
+
+                        buildsystem1.animate({x:0}, 1, mina.linear);
+                        buildsystem1ta.animate({x:160.77687}, 1, mina.linear);
+                        buildsystem1tb.animate({x:160.77687}, 1, mina.linear);
+                        repo.animate({x:211.697}, 1, mina.linear);
+                        repot.animate({x:230.956}, 1, mina.linear);
+                        container.animate({x:222.280}, 1, mina.linear);
+                        containert.animate({x:242.041}, 1, mina.linear);
+                        iso.animate({x:211.697}, 1, mina.linear);
+                        isot.animate({x:248.460}, 1, mina.linear);
+                    },
+                    8200
+              );
+
+              setTimeout(function() {
+                        buildsystem1.animate({"opacity":1}, 300, mina.easeinout);
+                        buildsystem1ta.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        buildsystem1tb.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        repo.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        repot.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        container.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        containert.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        iso.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        isot.animate({"fill-opacity":1}, 300, mina.easeinout);
+                        buildarr1.animate({"opacity":1}, 300, mina.easeinout);
+                        buildarr2a.animate({"opacity":1}, 300, mina.easeinout);
+                        buildarr2b.animate({"opacity":1}, 300, mina.easeinout);
+                        buildarr2c.animate({"opacity":1}, 300, mina.easeinout);
+                    },
+                    9000
+              );
+
+
+/*
+              setTimeout(function() {
+                      intro1.animate({"fill-opacity":0}, 800, mina.linear);
+                      intro2.animate({"fill-opacity":0}, 800, mina.linear);
+                      intro3.animate({"fill-opacity":0}, 800, mina.linear);
+                      intro4.animate({"fill-opacity":0}, 800, mina.linear);
+                      intro5.animate({"fill-opacity":0}, 800, mina.linear);
+                    },
+                    2000
+                );
+
+
+              setTimeout(function() {
+                      subtitle1a.animate({x:7}, 400, mina.easeinout);
+                      subtitle1a.animate({"fill-opacity":1}, 400, mina.easeinout);
+                      subtitle1b.animate({x:312}, 400, mina.easeinout);
+                      subtitle1b.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  3100
+              );
+
+              setTimeout(function() {
+                      distro1.animate({x:37.042}, 600, mina.easeinout);
+                      stack1.animate({x:42.333}, 600, mina.easeinout);
+                      lib1.animate({x:42.333}, 600, mina.easeinout);
+                      distro1t.animate({x:99.161}, 600, mina.easeinout);
+                      stack1t.animate({x:91.285}, 600, mina.easeinout);
+                      lib1t.animate({x:93.988}, 600, mina.easeinout);
+
+                      distro2.animate({x:116.417}, 600, mina.easeinout);
+                      stack2.animate({x:121.708}, 600, mina.easeinout);
+                      lib2.animate({x:121.708}, 600, mina.easeinout);
+                      distro2t.animate({x:178.536}, 600, mina.easeinout);
+                      stack2t.animate({x:170.660}, 600, mina.easeinout);
+                      lib2t.animate({x:173.363}, 600, mina.easeinout);
+                  },
+                  4500
+              );
+
+              setTimeout(function() {
+                      subtitle1a.animate({x:0}, 400, mina.easeinout);
+                      subtitle1a.animate({"fill-opacity":0}, 400, mina.easeinout);
+                      subtitle1b.animate({x:319}, 400, mina.easeinout);
+                      subtitle1b.animate({"fill-opacity":0}, 400, mina.easeinout);
+                  },
+                  7500
+              );
+              setTimeout(function() {
+                      subtitle2a.animate({x:7}, 400, mina.easeinout);
+                      subtitle2a.animate({"fill-opacity":1}, 400, mina.easeinout);
+                      subtitle2b.animate({x:312}, 400, mina.easeinout);
+                      subtitle2b.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  9000
+              );
+
+
+
+              ///////////////////// base runtime /////////////////////
+              setTimeout(function() {
+                      distro1t.animate({"fill-opacity":0}, 300, mina.easeinout);
+                      distro2t.animate({"fill-opacity":0}, 300, mina.easeinout);
+
+                      baseruntime.animate({"fill-opacity":0}, 300, mina.easeinout);
+                  },
+                  10000
+              );
+
+              setTimeout(function() {
+                      distro2t.animate({x:400}, 1, mina.easeinout);
+                      distro1t.animate({x:-400}, 1, mina.easeinout);
+                      baseruntime.animate({x:126.400}, 1, mina.easeinout);
+
+                      distro1.animate({y:222.91664,height:15.875}, 500, mina.easeinout);
+                      stack1.animate({x:37.042,width:158.750}, 500, mina.easeinout);
+                      lib1.animate({x:37.042,width:158.750}, 500, mina.easeinout);
+
+                      distro2.animate({y:222.91664,height:15.875}, 500, mina.easeinout);
+                      stack2.animate({x:116.417,width:158.750}, 500, mina.easeinout);
+                      lib2.animate({x:116.417,width:158.750}, 500, mina.easeinout);
+
+                  },
+                  10500
+              );
+
+              setTimeout(function() {
+                      baseruntime.animate({"fill-opacity":1}, 300, mina.easeinout);
+                  },
+                  11000
+              );
+
+
+              setTimeout(function() {
+                      subtitle2a.animate({x:0}, 400, mina.easeinout);
+                      subtitle2a.animate({"fill-opacity":0}, 400, mina.easeinout);
+                      subtitle2b.animate({x:319}, 400, mina.easeinout);
+                      subtitle2b.animate({"fill-opacity":0}, 400, mina.easeinout);
+                  },
+                  15000
+              );
+              setTimeout(function() {
+                      subtitle2c.animate({x:7}, 400, mina.easeinout);
+                      subtitle2c.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  15500
+              );
+
+              ///////////////////// modules /////////////////////
+
+              setTimeout(function() {
+                      stack1.animate({fill:"#9a5c34"}, 400);
+
+                      stack1t.animate({fill:"#e6e6e6"}, 400);
+
+                      stack2.animate({fill:"#9a5c34"}, 400);
+
+                      stack2t.animate({fill:"#e6e6e6"}, 400);
+
+                      distro1.animate({width:238.125}, 1, mina.easeinout);
+                  },
+                  17000
+              );
+
+
+              setTimeout(function() {
+                      stack1.animate({y:180.58331,height:37.042}, 1000, mina.easeinout);
+                      lib1.animate({y:196.45831,x:42.333,width:148.167}, 1000, mina.easeinout);
+
+                      stack1t.animate({y:191.99826}, 1000, mina.easeinout);
+                      lib1t.animate({y:207.87326}, 1000, mina.easeinout);
+
+                      stack2.animate({y:106.49997,height:37.042}, 1000, mina.easeinout);
+                      lib2.animate({y:122.37498,x:121.708,width:148.167}, 1000, mina.easeinout);
+
+                      stack2t.animate({y:117.91492}, 1000, mina.easeinout);
+                      lib2t.animate({y:133.78992}, 1000, mina.easeinout);
+                  },
+                  17500
+              );
+
+
+              ///////////////////// independent lifecycles /////////////////////
+
+              setTimeout(function() {
+                      subtitle2d.animate({x:312}, 400, mina.easeinout);
+                      subtitle2d.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  20000
+              );
+
+
+              setTimeout(function() {
+
+                      stack1.animate({x:21.167,width:179.917}, 1000, mina.easeinout);
+                      lib1.animate({x:26.458,width:169.333}, 1000, mina.easeinout);
+                      stack1t.animate({x:85.464}, 1000, mina.easeinout);
+                      lib1t.animate({x:88.167}, 1000, mina.easeinout);
+
+                      stack2.animate({x:145.833,width:166.375}, 1000, mina.easeinout);
+                      lib2.animate({x:151.125,width:155.792}, 1000, mina.easeinout);
+                      stack2t.animate({x:204.527}, 1000, mina.easeinout);
+                      lib2t.animate({x:207.229}, 1000, mina.easeinout);
+
+                      distro1.animate({x:5.291,width:306.918}, 1000, mina.easeinout);
+
+                  },
+                  21500
+              );
+
+              setTimeout(function() {
+                      subtitle2c.animate({x:0}, 400, mina.easeinout);
+                      subtitle2c.animate({"fill-opacity":0}, 400, mina.easeinout);
+                      subtitle2d.animate({x:319}, 400, mina.easeinout);
+                      subtitle2d.animate({"fill-opacity":0}, 400, mina.easeinout);
+                  },
+                  25500
+              );
+              setTimeout(function() {
+                      subtitle3a.animate({x:7}, 400, mina.easeinout);
+                      subtitle3a.animate({"fill-opacity":1}, 400, mina.easeinout);
+                      subtitle3b.animate({x:312}, 400, mina.easeinout);
+                      subtitle3b.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  26000
+              );
+
+              setTimeout(function() {
+                      stack1.animate({y:183.58331}, 1000, mina.bounce);
+                      lib1.animate({y:199.45831}, 1000, mina.bounce);
+
+                      stack1t.animate({y:194.99826}, 1000, mina.bounce);
+                      lib1t.animate({y:210.87326}, 1000, mina.bounce);
+
+                      stack2.animate({y:103.49997}, 1000, mina.bounce);
+                      lib2.animate({y:119.37498}, 1000, mina.bounce);
+
+                      stack2t.animate({y:114.91492}, 1000, mina.bounce);
+                      lib2t.animate({y:130.78992}, 1000, mina.bounce);
+
+                      distro1.animate({y:223.91664}, 1000, mina.bounce);
+                      distro2.animate({y:223.91664}, 1000, mina.bounce);
+                      baseruntime.animate({y:235.48273}, 1000, mina.bounce);
+
+
+                      stack3.animate({x:87.625}, 1000, mina.easeinout);
+                      lib3.animate({x:92.917}, 1000, mina.easeinout);
+                      stack3t.animate({x:173.089}, 1000, mina.easeinout);
+                      lib3t.animate({x:171.792}, 1000, mina.easeinout);
+
+
+                  },
+                  27500
+              );
+
+              setTimeout(function() {
+                      subtitle3a.animate({x:0}, 400, mina.easeinout);
+                      subtitle3a.animate({"fill-opacity":0}, 400, mina.easeinout);
+                      subtitle3b.animate({x:319}, 400, mina.easeinout);
+                      subtitle3b.animate({"fill-opacity":0}, 400, mina.easeinout);
+                  },
+                  31500
+              );
+              setTimeout(function() {
+                      subtitle4a.animate({x:7}, 400, mina.easeinout);
+                      subtitle4a.animate({"fill-opacity":1}, 400, mina.easeinout);
+                      subtitle4b.animate({x:312}, 400, mina.easeinout);
+                      subtitle4b.animate({"fill-opacity":1}, 400, mina.easeinout);
+                  },
+                  32000
+              );
+
+              setTimeout(function() {
+                      intro1.animate({"fill-opacity":1}, 800, mina.linear);
+                      intro2.animate({"fill-opacity":1}, 800, mina.linear);
+                      intro3.animate({"fill-opacity":1}, 800, mina.linear);
+                      intro4.animate({"fill-opacity":1}, 800, mina.linear);
+                      intro5.animate({"fill-opacity":1}, 800, mina.linear);
+                    },
+                    36000
+                );
+
+*/
+
+
+				      s.append(f);
+				  });
+			};
+		</script>
+    </head>
+    <body>
+        <div id="animationDiv"></div>
+    </body>
+</html>
