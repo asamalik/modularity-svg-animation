@@ -20,11 +20,7 @@
           var s = Snap("#animationDiv");
           //s.attr({viewBox: "0 0 255 150"});
 				  Snap.load("what-is-a-module.svg", function(f) {
-              intro1 = f.select("#rect4642");
-              intro2 = f.select("#path3584");
-              intro3 = f.select("#path3562");
-              intro4 = f.select("#path3588");
-              intro5 = f.select("#path4391");
+              logo = f.select("#logo");
 
               subtitle00 = f.select("#tspan10405");
               subtitle0a = f.select("#tspan13601");
@@ -37,6 +33,8 @@
               subtitle2d = f.select("#tspan7622");
               subtitle3a = f.select("#tspan7638");
               subtitle3b = f.select("#tspan7660");
+              subtitle4a = f.select("#tspan4614");
+              subtitle4b = f.select("#tspan4630-9");
 
 
               module1 = f.select("#module1");
@@ -79,22 +77,25 @@
 
               timer_gap_anim = 600;
               timer_gap_short = 2000;
-              timer_gap_long = 4000;
+              timer_gap_medium = 4000;
+              timer_gap_long = 7000;
 
-              timer_view_what = 1000;
 
-              timer_view_rep = timer_view_what + timer_gap_long;
+              timer_view_rep = 3000;
 
-              timer_view_is = timer_view_rep + timer_gap_long;
+              timer_view_is = timer_view_rep + timer_gap_medium;
               timer_view_is1 = timer_view_is + timer_gap_anim;
 
-              timer_view_def = timer_view_is1 + timer_gap_long;
+              timer_view_def = timer_view_is1 + timer_gap_medium;
               timer_view_def1 = timer_view_def + timer_gap_short;
               timer_view_def2 = timer_view_def1 + timer_gap_short;
               timer_view_def3 = timer_view_def2 + timer_gap_short;
 
               timer_view_bui = timer_view_def3 + timer_gap_long;
               timer_view_bui1 = timer_view_bui + timer_gap_anim;
+
+              timer_view_contact = timer_view_bui1 + timer_gap_long;
+              timer_view_contact1 = timer_view_contact + timer_gap_anim;
 
               timer_pause_anim = 800;
               timer_pause_text_out = 0;
@@ -120,6 +121,8 @@
                       subtitle2d.animate({"fill-opacity":0}, 1, mina.easeinout);
                       subtitle3a.animate({"fill-opacity":0}, 1, mina.easeinout);
                       subtitle3b.animate({"fill-opacity":0}, 1, mina.easeinout);
+                      subtitle4a.animate({"fill-opacity":0}, 1, mina.easeinout);
+                      subtitle4b.animate({"fill-opacity":0}, 1, mina.easeinout);
 
                       subtitle00.animate({y:283.8703}, 1, mina.easeout);
                       subtitle0a.animate({y:267.11334}, 1, mina.easeout);
@@ -132,12 +135,16 @@
                       subtitle2d.animate({y:283.8703}, 1, mina.easeout);
                       subtitle3a.animate({y:267.11334}, 1, mina.easeout);
                       subtitle3b.animate({y:283.8703}, 1, mina.easeout);
+                      subtitle4a.animate({y:267.11334}, 1, mina.easeout);
+                      subtitle4b.animate({y:283.8703}, 1, mina.easeout);
 
+                      module1.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component1.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component2.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component3.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component4.animate({"fill-opacity":0}, 1, mina.easeinout);
 
+                      module1t.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component1t.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component2t.animate({"fill-opacity":0}, 1, mina.easeinout);
                       component3t.animate({"fill-opacity":0}, 1, mina.easeinout);
@@ -176,14 +183,32 @@
 
 
               setTimeout(function() {
+                      module1.animate({x:73.922}, 1, mina.easeinout);
+                      module1t.animate({x:140.043}, 1, mina.easeinout);
+                    },
+                    10
+              );
+
+              setTimeout(function() {
+                      logo.animate({"opacity":1}, speed_anim, mina.easeinout);
                       subtitle00.animate({"fill-opacity":1}, speed_text, mina.easeinout);
                     },
-                    timer_view_what + timer_pause_text_in
+                    200
               );
 
 
+
+
+              setTimeout(function() {
+                      module1.animate({"fill-opacity":1}, speed_anim, mina.easeinout);
+                      module1t.animate({"fill-opacity":1}, speed_anim, mina.easeinout);
+                    },
+                    timer_view_rep + timer_pause_anim
+              );
+
               setTimeout(function() {
                       subtitle00.animate({"fill-opacity":0}, speed_text, mina.easeinout);
+                      logo.animate({"opacity":0}, speed_anim, mina.easeinout);
                     },
                     timer_view_rep + timer_pause_text_out
               );
@@ -199,7 +224,7 @@
 
 
               setTimeout(function() {
-                      module1t.animate({y:126.3273}, 400, mina.easeinout);
+                      module1t.animate({y:126.3273}, speed_anim, mina.easeinout);
                       component1.animate({x:79.214}, 1, mina.easeinout);
                       component2.animate({x:79.214}, 1, mina.easeinout);
                       component3.animate({x:79.214}, 1, mina.easeinout);
@@ -386,7 +411,7 @@
                       component3.animate({fill:"#e6e6e6"}, speed_anim, mina.easeinout);
                       component4.animate({fill:"#e6e6e6"}, speed_anim, mina.easeinout);
                     },
-                    timer_view_bui
+                    timer_view_bui + timer_pause_anim
               );
 
               setTimeout(function() {
@@ -408,7 +433,7 @@
                         iso.animate({x:211.697}, 1, mina.easeinout);
                         isot.animate({x:248.460}, 1, mina.easeinout);
                     },
-                    timer_view_bui
+                    timer_view_bui + timer_pause_anim
               );
 
               setTimeout(function() {
@@ -426,7 +451,7 @@
                         buildarr2b.animate({"opacity":1}, speed_anim, mina.easeinout);
                         buildarr2c.animate({"opacity":1}, speed_anim, mina.easeinout);
                     },
-                    timer_view_bui1
+                    timer_view_bui1 + timer_pause_anim
               );
 
               setTimeout(function() {
@@ -443,6 +468,55 @@
                       subtitle3b.animate({"fill-opacity":1}, speed_text, mina.easeinout);
                     },
                     timer_view_bui + timer_pause_text_in
+              );
+
+
+
+
+              setTimeout(function() {
+                      buildsystem1.animate({"opacity":0}, speed_anim, mina.easeinout);
+                      buildsystem1ta.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      buildsystem1tb.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      repo.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      repot.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      container.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      containert.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      iso.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      isot.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      buildarr1.animate({"opacity":0}, speed_anim, mina.easeinout);
+                      buildarr2a.animate({"opacity":0}, speed_anim, mina.easeinout);
+                      buildarr2b.animate({"opacity":0}, speed_anim, mina.easeinout);
+                      buildarr2c.animate({"opacity":0}, speed_anim, mina.easeinout);
+
+                      module1.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      component1.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      component2.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      component3.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                      component4.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+
+                      module1t.animate({"fill-opacity":0}, speed_anim, mina.easeinout);
+                    },
+                    timer_view_contact + timer_pause_anim
+              );
+
+              setTimeout(function() {
+                      subtitle3a.animate({"fill-opacity":0}, speed_text, mina.easeinout);
+                      subtitle3b.animate({"fill-opacity":0}, speed_text, mina.easeinout);
+                    },
+                    timer_view_contact + timer_pause_text_out
+              );
+
+              setTimeout(function() {
+                      subtitle4a.animate({"fill-opacity":1}, speed_text, mina.easeinout);
+                      subtitle4b.animate({"fill-opacity":1}, speed_text, mina.easeinout);
+                    },
+                    timer_view_contact + timer_pause_text_in
+              );
+
+              setTimeout(function() {
+                      logo.animate({"opacity":1}, speed_anim, mina.easeinout);
+                    },
+                    timer_view_contact1 + timer_pause_anim
               );
 
 
